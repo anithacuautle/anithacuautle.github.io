@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang "es">
+<head>
+  <meta charset="utf-8">
+    <title>REGISTRO DE USUARIOS</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script type="text/javascript">
+    function mayusculas(e){
+      e.value = e.value.toUpperCase();
+    }
+    function soloLetras(e) {
+      var key = e.keyCode || e.which,
+        tecla = String.fromCharCode(key).toLowerCase(),
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz",
+        especiales = [8, 37, 39, 46],
+        tecla_especial = false;
+
+      for (var i in especiales) {
+        if (key == especiales[i]) {
+          tecla_especial = true;
+          break;
+        }
+      }
+
+      if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+        return false;
+      }
+    }
+    </script>
+  </head>
+  <body bgcolor="lightblue">
+   <div class="regDer">
+        <center>
+    <h1 style="font-family:'Elephant';">REGISTRO DE USUARIOS</h1>
+    <form action="regUsuarios.php" method="post">
+    <span class="textoReg">Nombre:</span><input type="text" name="caja_Nombre" class="cajaRegs" onkeypress="return soloLetras(event)" onkeyup="mayusculas(this)" required placeholder="Nombre" autocomplete="off"><br>
+    <span class="textoReg">Apellido paterno:</span><input type="text" name="caja_Paterno" class="cajaRegs" onkeypress="return soloLetras(event)" onkeyup="mayusculas(this)" required placeholder="Apellido paterno" autocomplete="off"><br>
+    <span class="textoReg">Apellido materno:</span><input type="text" name="caja_Materno" class="cajaRegs" onkeypress="return soloLetras(event)" onkeyup="mayusculas(this)" required placeholder="Apellido aterno" autocomplete="off"><br>
+    <span class="textoReg">Correo:</span><input type="email" name="caja_Correo" class="cajaRegs" required placeholder="usuario@dominio.com" autocomplete="off">@
+    <select name="lst_Dominio " class="cajaRegs">
+      <option value="gmail.com">gmail.com</option>
+      <option value="hotmail.com">hotmail.com</option>
+      <option value="outlook.com">outlook.com</option>
+      <option value="live.com">live.com</option>
+      <option value="yahoo.com">jahoo.com</option>
+    </select><br>
+    <span class="textoReg">Contraseña:</span><input type="password" name="caja_Psw" class="cajaRegs"required placeholder="Contraseña" autocomplete="off"><br><br>
+    <button type="submit" name="btnRegistro"  class="botonRegiss">Dar de alta</button>
+    </form>
+    <form action="index.html" method="post">
+      <br>
+      <button type="submit" name="btnRegreso"  class="botonRegis">Regresar</button>
+    </form></center>
+    </div>
+  </body>
+</html>

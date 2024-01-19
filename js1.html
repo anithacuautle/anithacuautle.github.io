@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>INTRODUCCION A JAVASCRIPT</title>
+     <script type="text/javascript">
+       function bienvenida(){
+         alert("BIENVENIDO USUARIO");
+       }
+       function ingresos(){
+       var valor1=parseInt(prompt("ingresa primer numero",0));
+       var valor2=parseInt(prompt("ingresa segundo numero",0));
+       var valor3=parseInt(prompt("ingresa tercer numero",0));
+       var valor4=parseInt(prompt("ingresa cuarto numero",0));
+       var valor5=parseInt(prompt("ingresa quinto numero",0));
+
+       var suma=valor1+valor2+valor3+valor4+valor5;
+
+       document.write("la suma es:"+suma);
+       //alert("la suma es :"+suma);
+       }
+       function pregunta(){
+         var confirm("Hoy es lunes 18 de mayo de 2021");
+if (respuesta) {
+  alert("presionaste aceptar");
+}else {
+  alert("precionaste cancelar");
+}
+       }
+       function cambio(){
+         document.getElementById('cuadro').style.backgroundColor='#ff0045';
+       }
+     </script>
+   </head>
+   <body onload="bienvenida();">
+<button type="button" name="button" onclick="ingresos();">INGRESAR VALOR</button>
+<br>
+<button type="button" name="button" onclick="pregunta();">Ver pregunta</button>
+<br>
+<button type="button" name="button" onclick="cambio();">Cambiar Color</button>
+<br>
+<div id="cuadro">OBJETO CUADRO</div>
+  </body>
+</html>

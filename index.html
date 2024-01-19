@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+  </head>
+  <body bgcolor="lightgrey">
+    <div class="loginIzq"><img style="border-radius: 40px 0 0 170px;"  src="pruebas/img.jpg"></div>
+      <div class="loginDer">
+        <h1 align="center" style="font-family:'Elephant';">INICIO DE SESIÓN</h1>
+        <center>
+    <form action="login.php" method="post">
+      <span class="textoLogin">Usuario:</span><input type="text" name="caja_Usuario" class="cajaLogin" autocomplete="off" required placeholder="Escribe tu usuario"><br><br>
+      <span class="textoLogin">Password:</span><input type="password" name="caja_Psw" class="cajaLogin" autocomplete="off" required placeholder="Escribe tu contraseña">
+      <br><br>
+      <button type="submit" name="btn_Login" class="botonLogin">Iniciar sesión</button>
+    </form>
+    <form action="regUsuarios.html" method="post">
+      <button type="submit" name="btn_Login" class="botonReg">Registrar usuario</button>
+    </form></center>
+    </div>
+  </body>
+</html>
